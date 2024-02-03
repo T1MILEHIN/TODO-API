@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-llm7h=t)7wr5^rwg38w0)0%3s5+9ogmqgx)^v_lsy7jgu67nml
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -83,6 +83,8 @@ DATABASES = {
     }
 }
 
+
+DATABASES['default'] = dj_database_url.parse("postgres://todo_api_az5u_user:Ygd6Mp18AycsWrrFWoIW535DmnIq7RnH@dpg-cmv2ks7109ks73b8cd5g-a.oregon-postgres.render.com/todo_api_az5u")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
