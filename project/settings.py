@@ -28,9 +28,9 @@ security_key = os.environ.get("SECURITY_KEY")
 SECRET_KEY = security_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["localhost"]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
